@@ -8,27 +8,143 @@
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 	<style>
+
+    #home {
+      background: url(images/photobackground.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      filter:alpha(opacity=50);
+    }
+
+    #home article {
+      background: rgba(0,0,0,.8);
+		   width: 40%;
+		   height: auto;
+		   position: absolute;
+		   left: 50%;
+		   top: 50%; 
+		   margin-left: -20%;
+		   margin-top: -15%;
+      border-radius: 20px;
+      color: white;
+      font-weight: lighter;
+      text-shadow: none;
+    }
+    
+		#home article h1, #home article p {
+			margin: 0;
+			padding:5px;
+		}
+		
+		#home article h1 {
+			padding-bottom: 10px;
+			color: #29A198;
+		}
+
 		img.fullscreen {
 			max-height: 100%;
 			max-width: 100%;
-		}		
+		}
 	</style>
 </head>
 <body>
+<div id="home" data-role="page">
+  <article data-role="content">
+    <h1>Portfolio</h1>  
+    <p>Here's some of the photos I've taken over the years. You can see some of my other work on my <a href="http://flickr.com/planetoftheweb">flickr page</a>.</p>
+    	<div class="container">
+<a href="#photos" data-role="button"
+		  data-icon="grid">View photos</a>
+    	</div>
+		  
+  </article>
+
+</div>
+
 <div data-role="page" id="photos">
 	<header data-role="header">
 		<h1>My Photos</h1>
 	</header>
 	<article data-role="content">
 		<ul data-role="listview"  data-filter="true">
-			<li>
-				<a href="#dog">
-				<h1>Miniature Doberman Pinscher</h1>
-				<img src="images/doggie_tn.jpg" alt="Min Pin" />
-				<p>This is what happens when a
-				friend brings a dog to the studio.</p>
-				</a>
-			</li>
+      <li>
+        <a href="#dog">
+        <h1>Chihuahua</h1>
+        <img src="images/doggie_tn.jpg" alt="Min Pin" />
+        <p>This is what happens when a
+        friend brings a dog to the studio.</p>
+        </a>
+      </li>
+
+      <li>
+        <a href="#halloween">
+          <h1>Halloween Winner</h1>
+          <img src="images/halloween_tn.jpg" alt="Photo of halloween" />
+          <p>One of the winners of our Halloween contest. A variety of listeners came dressed up for the occasion</p>
+        </a>
+      </li>
+
+      <li>
+        <a href="#enrique">
+          <h1>Enrique Iglesias</h1>
+          <img src="images/enrique_tn.jpg" alt="Photo of enrique" />
+          <p>Spanish pop artist Enrique Iglesias taken at Pepsi Música Superbowl event in 2008</p>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#epi">
+          <h1>Epi Colon</h1>
+          <img src="images/epi_tn.jpg" alt="Photo of epi" />
+          <p>Morning show personality Epi Colon shot for a halloween promotion at WNUE-FM</p>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#vero">
+          <h1>La Vero</h1>
+          <img src="images/vero_tn.jpg" alt="Photo of vero" />
+          <p>Promotions Assistant Veronica Quiñones on a red background with a yellow gel highlight</p>
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#jennifer">
+          <h1>Jennifer</h1>
+          <img src="images/jennifer_tn.jpg" alt="Photo of jennifer" />
+          <p>One of our models in Daytona Beach florida show with a number of small flashes</p>
+        </a>
+      </li>
+
+      <li>
+        <a href="#panorama">
+          <h1>Downtown Orlando Panorama</h1>
+          <img src="images/panorama_tn.jpg" alt="Photo of panorama" />
+          <p>Panorama of Downtown Orlando at Lake Eola. Taken with a 30 second exposure a bit past dawn</p>
+        </a>
+      </li>
+
+      <li>
+        <a href="#spoon">
+          <h1>Spoon</h1>
+          <img src="images/spoon_tn.jpg" alt="Photo of spoon" />
+          <p>A simple shot of a spoon shot to illustrate reflections in my photography class</p>
+        </a>
+      </li>
+
+      <li>
+        <a href="#weddingcake">
+          <h1>Wedding Cake</h1>
+          <img src="images/weddingcake_tn.jpg" alt="Photo of weddingcake" />
+          <p>A picture of a wedding cake. Handheld, but with a slow shutter speed and a narrow DOF</p>
+        </a>
+      </li>
+
 			<li>
 				<a href="#gummies">
 				<h1>Gummy Bears</h1>
@@ -42,21 +158,24 @@
 	<footer data-role="footer" data-position="fixed">
 		<nav data-role="navbar">
 			<ul>
-				<li><a href="home" data-icon="home">Home</a></li>
-				<li><a href="Photos" data-icon="grid">Photos</a></li>
-				<li><a href="Info" data-icon="info">Info</a></li>
+				<li><a href="#home" data-icon="home">Home</a></li>
+				<li><a href="#Photos" data-icon="grid">Photos</a></li>
 			</ul>
 		</nav>
 	</footer>
 </div><!-- Page Photos -->
 
+
+
+<!-- ================= Photo Pages ================= -->
+
 	<div data-role="page" id="dog">
 		<header data-role="header">
-			<h1>Min Pin</h1>
+			<h1>Chihuahua</h1>
 			<a href="#photos" data-icon="grid" data-iconpos="notext">Photos</a>
 		</header>
 		<img src="images/doggie.jpg" class="fullscreen" alt="Min Pin" />
-	</div><!-- Page Dog -->
+	</div><!-- Page dog -->
 	
 	<div data-role="page" id="gummies">
 		<header data-role="header">
@@ -64,7 +183,88 @@
 			<a href="#photos" data-icon="grid" data-iconpos="notext">Photos</a>
 		</header>
 		<img src="images/gummies.jpg" class="fullscreen" alt="Gummy Bears" />
-	</div><!-- Page Gummy Bears --> 
+	</div><!-- Page gummies --> 
+
+
+  <div data-role="page" id="vero">
+    <header data-role="header">
+      <h1>La Vero</h1>
+      <a href="#photos" data-icon="grid" data-iconpos="notext">Photos</a>
+    </header>
+    <img src="images/vero.jpg" class="fullscreen" alt="Photo of vero" />
+  </div><!-- Page vero --> 
+
+
+  <div data-role="page" id="valentines">
+    <header data-role="header">
+      <h1>Valentines winner</h1>
+      <a href="#photos" data-icon="grid" data-iconpos="notext">Photos</a>
+    </header>
+    <img src="images/valentines.jpg" class="fullscreen" alt="Photo of valentines" />
+  </div><!-- Page valentines --> 
+
+
+  <div data-role="page" id="epi">
+    <header data-role="header">
+      <h1>Epi Colon</h1>
+      <a href="#photos" data-icon="grid" data-iconpos="notext">Photos</a>
+    </header>
+    <img src="images/epi.jpg" class="fullscreen" alt="Photo of epi" />
+  </div><!-- Page Gummy Bears --> 
+
+
+  <div data-role="page" id="jennifer">
+    <header data-role="header">
+      <h1>Jennifer</h1>
+      <a href="#photos" data-icon="grid" data-iconpos="notext">Photos</a>
+    </header>
+    <img src="images/jennifer.jpg" class="fullscreen" alt="Photo of jennifer" />
+  </div><!-- Page Gummy Bears --> 
+
+
+  <div data-role="page" id="weddingcake">
+    <header data-role="header">
+      <h1>Wedding Cake</h1>
+      <a href="#photos" data-icon="grid" data-iconpos="notext">Photos</a>
+    </header>
+    <img src="images/weddingcake.jpg" class="fullscreen" alt="Photo of weddingcake" />
+  </div><!-- Page Gummy Bears --> 
+
+
+  <div data-role="page" id="enrique">
+    <header data-role="header">
+      <h1>Enrique Iglesias</h1>
+      <a href="#photos" data-icon="grid" data-iconpos="notext">Photos</a>
+    </header>
+    <img src="images/enrique.jpg" class="fullscreen" alt="Photo of enrique" />
+  </div><!-- Page Gummy Bears --> 
+
+
+  <div data-role="page" id="halloween">
+    <header data-role="header">
+      <h1>Halloween</h1>
+      <a href="#photos" data-icon="grid" data-iconpos="notext">Photos</a>
+    </header>
+    <img src="images/halloween.jpg" class="fullscreen" alt="Photo of halloween" />
+  </div><!-- Page Gummy Bears --> 
+
+
+  <div data-role="page" id="spoon">
+    <header data-role="header">
+      <h1>Spoon</h1>
+      <a href="#photos" data-icon="grid" data-iconpos="notext">Photos</a>
+    </header>
+    <img src="images/spoon.jpg" class="fullscreen" alt="Photo of spoon" />
+  </div><!-- Page Gummy Bears --> 
+
+
+  <div data-role="page" id="panorama">
+    <header data-role="header">
+      <h1>Downtown Orlando Panorama</h1>
+      <a href="#photos" data-icon="grid" data-iconpos="notext">Photos</a>
+    </header>
+    <img src="images/panorama.jpg" class="fullscreen" alt="Photo of panorama" />
+  </div><!-- Page Gummy Bears --> 
 
 </body>
 </html>
